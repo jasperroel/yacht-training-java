@@ -1,0 +1,11 @@
+#!/bin/bash
+
+sudo docker run \
+  --rm \
+  -it \
+  -v "$PWD":/usr/src/mymaven -w /usr/src/mymaven \
+  -v "$PWD"/settings.xml:/root/.m2/settings.xml \
+  -v "$PWD"/docker/cache:/root/.m2/repository \
+  maven:3.5-jdk-8 \
+  mvn clean compile \
+    exec:java -Dexec.mainClass="com.yacht.BasicCrawler" -Dorg.slf4j.simpleLogger.defaultLogLevel=INFO

@@ -3,10 +3,6 @@
 ## Google Docs instructions
 https://docs.google.com/document/d/1COHVMmcklIs8SdHw3T1sujVeUducoMzMpixHzBWD7f8/edit?usp=sharing
 
-## Jasper TODO
-Done crawling, 52 links visited. (crosscheck: 52)
-Dat zijn er vast meer...
-
 ## Docker run
 To compile your code using Docker (and a default local cache), run the following: 
 
@@ -16,6 +12,18 @@ To actually run this script using the default Main class (`com.yacht.BasicCrawle
 
 `./scripts/02-run`
 
+You don't need the "Maven setup" steps below, as the Docker scripts do this for you
+
+## Maven run
+
+If you're not into the whole Docker thing, that's fine. Here's the command we use inside the container.
+
+Make sure to folow the "Maven setup" below.
+
+`mvn clean compile 
+     exec:java -Dexec.mainClass="com.yacht.BasicCrawler" -Dorg.slf4j.simpleLogger.defaultLogLevel=INFO`
+
+Your IDE can probably run that file for you as well.
 
 ## Maven setup
 Add the following to your ~/.m2/settings.xml file:

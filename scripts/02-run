@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo docker run \
+docker run \
   --rm \
   -it \
   -v "$PWD":/usr/src/mymaven -w /usr/src/mymaven \

@@ -8,7 +8,7 @@ To compile your code using Docker (and a default local cache), run the following
 
 `./scripts/01-build`
 
-To actually run this script using the default Main class (`com.yacht.BasicCrawler`), run:
+To actually run this script using the default Main class (`com.yacht.VacatureCrawler`), run:
 
 `./scripts/02-run`
 
@@ -21,7 +21,7 @@ If you're not into the whole Docker thing, that's fine. Here's the command we us
 Make sure to folow the "Maven setup" below.
 
 `mvn clean compile 
-     exec:java -Dexec.mainClass="com.yacht.BasicCrawler" -Dorg.slf4j.simpleLogger.defaultLogLevel=INFO`
+     exec:java -Dexec.mainClass="com.yacht.VacatureCrawler"`
 
 Your IDE can probably run that file for you as well.
 
